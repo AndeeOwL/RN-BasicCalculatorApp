@@ -10,23 +10,29 @@ function CalculatorScreen() {
   const [resultText, setResultText] = useState("");
   const [operationsText, setOperationsText] = useState("0");
   const invalidCharSet = ["-", "+", "/", "*"];
-  let lastChar = () => operationsText.charAt(operationsText.length - 1);
+  const lastChar = () => operationsText.charAt(operationsText.length - 1);
+  let isValid = false;
 
   const onButtonPress = (enteredValue) => {
+    isValid = () =>
+      operationsText.forEach((char) => {
+        if (invalidCharSet.includes(char)) {
+          isValid = true;
+        }
+      });
     if (operationsText.toString() === "0" && !isNaN(enteredValue)) {
       setOperationsText(enteredValue);
     } else if (
-      (invalidCharSet.includes(lastChar) &&
-        invalidCharSet.includes(enteredValue)) ||
-      (lastChar === "." && enteredValue === ".")
+      (invalidCharSet.includes(lastChar) || lastChar === ".") &&
+      (invalidCharSet.includes(enteredValue) || enteredValue === ".")
     ) {
       return;
-    } else if (invalidCharSet.includes(lastChar) && isNaN(operationsText)) {
-      let result = calculatorService(operationsText, invalidCharSet);
+    } else if (invalidCharSet.includes(lastChar) && isValid) {
+      let result = () => calculatorService(operationsText, invalidCharSet);
       setOperationsText(result);
       setResultText(result);
     } else {
-      setOperationsText(operationsText.concat(enteredValue));
+      setOperationsText(operationsText + enteredValue.toString());
     }
   };
 
