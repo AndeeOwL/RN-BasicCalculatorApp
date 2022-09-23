@@ -14,6 +14,12 @@ function CalculatorScreen() {
   let isValid = false;
 
   const onButtonPress = (enteredValue) => {
+    for (i = 0; i < operationsText.length; i++) {
+      if (invalidCharSet.includes(operationsText.charAt(i))) {
+        isValid = true;
+      }
+    }
+    console.log(isValid);
     if (operationsText.toString() === "0" && !isNaN(enteredValue)) {
       setOperationsText(enteredValue);
     } else if (
