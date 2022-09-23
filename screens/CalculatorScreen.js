@@ -14,22 +14,16 @@ function CalculatorScreen() {
   let isValid = false;
 
   const onButtonPress = (enteredValue) => {
-    isValid = () =>
-      operationsText.forEach((char) => {
-        if (invalidCharSet.includes(char)) {
-          isValid = true;
-        }
-      });
     if (operationsText.toString() === "0" && !isNaN(enteredValue)) {
       setOperationsText(enteredValue);
     } else if (
-      (invalidCharSet.includes(lastChar) || lastChar === ".") &&
+      (invalidCharSet.includes(lastChar()) || lastChar() === ".") &&
       (invalidCharSet.includes(enteredValue) || enteredValue === ".")
     ) {
       return;
-    } else if (invalidCharSet.includes(lastChar) && isValid) {
-      let result = () => calculatorService(operationsText, invalidCharSet);
-      setOperationsText(result);
+    } else if (invalidCharSet.includes(enteredValue) && isValid) {
+      let result = calculatorService(operationsText, invalidCharSet);
+      setOperationsText(result + enteredValue);
       setResultText(result);
     } else {
       setOperationsText(operationsText + enteredValue.toString());
@@ -39,11 +33,11 @@ function CalculatorScreen() {
   const onOperationPress = (enteredValue) => {
     switch (enteredValue) {
       case "=":
-        if (invalidCharSet.includes(lastChar)) {
+        if (invalidCharSet.includes(lastChar())) {
           return;
         } else {
           let result = calculatorService(operationsText, invalidCharSet);
-          setOperationsText(result);
+          setOperationsText("0");
           setResultText(result);
         }
         break;
