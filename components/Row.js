@@ -4,9 +4,13 @@ import Button from "./Button";
 function Row(props) {
   return (
     <View style={styles.rows}>
-      <Button value={props.firstValue} onPress={props.onPress} />
-      <Button value={props.secondValue} onPress={props.onPress} />
-      <Button value={props.thirdValue} onPress={props.onPress} />
+      {props.values.map((val) => (
+        <Button
+          key={Math.random().toString()}
+          value={val}
+          onPress={props.onPress}
+        />
+      ))}
     </View>
   );
 }

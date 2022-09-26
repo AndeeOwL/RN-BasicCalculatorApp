@@ -2,38 +2,17 @@ import { View, StyleSheet } from "react-native";
 import Button from "./Button";
 
 function Operators(props) {
+  const OPERATIONS = ["DEL", "AC", "+", "-", "/", "*"];
   return (
     <View style={styles.operationsContainer}>
-      <Button
-        style={styles.operationsButtons}
-        value={"DEL"}
-        onPress={props.onOperationPress}
-      />
-      <Button
-        style={styles.operationsButtons}
-        value={"AC"}
-        onPress={props.onOperationPress}
-      />
-      <Button
-        style={styles.operationsButtons}
-        value={"+"}
-        onPress={props.onButtonPress}
-      />
-      <Button
-        style={styles.operationsButtons}
-        value={"-"}
-        onPress={props.onButtonPress}
-      />
-      <Button
-        style={styles.operationsButtons}
-        value={"/"}
-        onPress={props.onButtonPress}
-      />
-      <Button
-        style={styles.operationsButtons}
-        value={"*"}
-        onPress={props.onButtonPress}
-      />
+      {OPERATIONS.map((o) => (
+        <Button
+          key={Math.random().toString()}
+          style={styles.operationsButtons}
+          value={o}
+          onPress={props.onOperationPress}
+        />
+      ))}
     </View>
   );
 }
