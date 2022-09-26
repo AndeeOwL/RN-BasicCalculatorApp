@@ -7,16 +7,15 @@ export function operationPressHandler(calculationText, enteredValue, lastChar) {
       if (OPERATORS.includes(lastChar)) {
         return;
       } else {
-        let result = calculatorService(calculationText, invalidCharSet);
+        let result = calculatorService(calculationText, OPERATORS);
         return [result, "0"];
       }
     case "DEL":
       if (calculationText.toString().length === 1) {
-        setOperationsText("0");
         return ["0"];
       } else {
         return [
-          operationsText.toString().substring(0, operationsText.length - 1),
+          calculationText.toString().substring(0, calculationText.length - 1),
         ];
       }
     case "AC":

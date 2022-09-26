@@ -6,7 +6,7 @@ function Buttons(props) {
   return (
     <View style={styles.numbersContainer}>
       {Array.from(
-        [1, 2, 3].map((i) => (
+        [0, 1, 2].map((i) => (
           <Row
             key={Math.random().toString()}
             values={[i * 3 + 1, i * 3 + 2, i * 3 + 3]}

@@ -1,4 +1,5 @@
 import { OPERATORS } from "../constants/OPERATORS";
+import { calculatorService } from "./calculatorService";
 export function buttonPressHandler(enteredValue, calculationText, lastChar) {
   let isValid = false;
 
@@ -16,7 +17,7 @@ export function buttonPressHandler(enteredValue, calculationText, lastChar) {
   ) {
     return;
   } else if (OPERATORS.includes(enteredValue) && isValid) {
-    let result = calculatorService(calculationText, invalidCharSet);
+    let result = calculatorService(calculationText, OPERATORS);
     return [result, result + enteredValue.toString()];
   } else {
     return [calculationText + enteredValue.toString()];

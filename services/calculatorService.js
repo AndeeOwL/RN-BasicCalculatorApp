@@ -1,15 +1,15 @@
-export function calculatorService(operationText, invalidCharSet) {
+export function calculatorService(calculationText, OPERATORS) {
   const operands = [];
   const operators = [];
   let substr = "";
   let result = 0;
 
-  for (i = 0; i <= operationText.length - 1; i++) {
-    let char = operationText.charAt(i);
+  for (i = 0; i <= calculationText.length - 1; i++) {
+    let char = calculationText.charAt(i);
 
     if (!isNaN(char) || char === ".") {
       substr += char.toString();
-    } else if (invalidCharSet.includes(char)) {
+    } else if (OPERATORS.includes(char)) {
       operators.push(char);
       operands.push(substr);
       substr = "";
