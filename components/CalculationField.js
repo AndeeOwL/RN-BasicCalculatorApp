@@ -3,7 +3,9 @@ import { StyleSheet, Text, View } from "react-native";
 function CalculationField(props) {
   return (
     <View style={styles.calculationTextContainer}>
-      <Text style={styles.calculationText}>{props.value}</Text>
+      <Text testID={props.testID} style={styles.calculationText}>
+        {props.value}
+      </Text>
     </View>
   );
 }
