@@ -2,6 +2,10 @@ import { render, fireEvent } from "@testing-library/react-native";
 import CalculatorScreen from "../screens/CalculatorScreen";
 
 describe("Tests calculatorScreen component", () => {
+  test("renders correctly", () => {
+    const tree = render(<CalculatorScreen />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
   test("should change values to calculationField and resultField on = press", () => {
     const { getByTestId, getByText } = render(<CalculatorScreen />);
     const resultField = getByTestId("resultField");

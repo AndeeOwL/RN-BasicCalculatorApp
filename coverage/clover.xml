@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1664294983667" clover="3.2.0">
-  <project timestamp="1664294983668" name="All files">
+<coverage generated="1664295833261" clover="3.2.0">
+  <project timestamp="1664295833261" name="All files">
     <metrics statements="86" coveredstatements="86" conditionals="39" coveredconditionals="37" methods="19" coveredmethods="18" elements="144" coveredelements="141" complexity="0" loc="86" ncloc="86" packages="4" files="11" classes="11"/>
     <package name="components">
       <metrics statements="19" coveredstatements="19" conditionals="2" coveredconditionals="1" methods="12" coveredmethods="12"/>
       <file name="Button.js" path="/Users/andrean.buhchev/Documents/ReactNative/RN-BasicCalculatorApp/components/Button.js">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
-        <line num="4" count="432" type="stmt"/>
+        <line num="4" count="450" type="stmt"/>
         <line num="7" count="19" type="stmt"/>
-        <line num="9" count="432" type="cond" truecount="1" falsecount="1"/>
+        <line num="9" count="450" type="cond" truecount="1" falsecount="1"/>
         <line num="18" count="1" type="stmt"/>
       </file>
       <file name="Buttons.js" path="/Users/andrean.buhchev/Documents/ReactNative/RN-BasicCalculatorApp/components/Buttons.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="6" count="24" type="stmt"/>
-        <line num="10" count="72" type="stmt"/>
+        <line num="6" count="25" type="stmt"/>
+        <line num="10" count="75" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
       </file>
       <file name="CalculationField.js" path="/Users/andrean.buhchev/Documents/ReactNative/RN-BasicCalculatorApp/components/CalculationField.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="4" count="24" type="stmt"/>
+        <line num="4" count="25" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
       </file>
       <file name="Operators.js" path="/Users/andrean.buhchev/Documents/ReactNative/RN-BasicCalculatorApp/components/Operators.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-        <line num="6" count="24" type="stmt"/>
-        <line num="8" count="24" type="stmt"/>
-        <line num="11" count="48" type="stmt"/>
-        <line num="19" count="96" type="stmt"/>
+        <line num="6" count="25" type="stmt"/>
+        <line num="8" count="25" type="stmt"/>
+        <line num="11" count="50" type="stmt"/>
+        <line num="19" count="100" type="stmt"/>
         <line num="32" count="1" type="stmt"/>
       </file>
       <file name="ResultField.js" path="/Users/andrean.buhchev/Documents/ReactNative/RN-BasicCalculatorApp/components/ResultField.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="4" count="24" type="stmt"/>
+        <line num="4" count="25" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
       </file>
       <file name="Row.js" path="/Users/andrean.buhchev/Documents/ReactNative/RN-BasicCalculatorApp/components/Row.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="5" count="72" type="stmt"/>
-        <line num="8" count="216" type="stmt"/>
+        <line num="5" count="75" type="stmt"/>
+        <line num="8" count="225" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
       </file>
     </package>
@@ -53,23 +53,23 @@
       <metrics statements="18" coveredstatements="18" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="3"/>
       <file name="CalculatorScreen.js" path="/Users/andrean.buhchev/Documents/ReactNative/RN-BasicCalculatorApp/screens/CalculatorScreen.js">
         <metrics statements="18" coveredstatements="18" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="3"/>
-        <line num="13" count="24" type="stmt"/>
-        <line num="14" count="24" type="stmt"/>
-        <line num="16" count="24" type="stmt"/>
-        <line num="19" count="24" type="stmt"/>
-        <line num="21" count="24" type="stmt"/>
+        <line num="13" count="25" type="stmt"/>
+        <line num="14" count="25" type="stmt"/>
+        <line num="16" count="25" type="stmt"/>
+        <line num="19" count="25" type="stmt"/>
+        <line num="21" count="25" type="stmt"/>
         <line num="22" count="16" type="stmt"/>
         <line num="23" count="16" type="cond" truecount="2" falsecount="0"/>
         <line num="24" count="14" type="stmt"/>
         <line num="26" count="2" type="stmt"/>
         <line num="27" count="2" type="stmt"/>
-        <line num="31" count="24" type="stmt"/>
+        <line num="31" count="25" type="stmt"/>
         <line num="32" count="3" type="stmt"/>
         <line num="34" count="3" type="cond" truecount="2" falsecount="0"/>
         <line num="35" count="1" type="stmt"/>
         <line num="37" count="2" type="stmt"/>
         <line num="38" count="2" type="stmt"/>
-        <line num="42" count="24" type="stmt"/>
+        <line num="42" count="25" type="stmt"/>
         <line num="64" count="1" type="stmt"/>
       </file>
     </package>
