@@ -8,7 +8,7 @@ export function operationPressHandler(calculationText, enteredValue, lastChar) {
         return;
       } else {
         let result = calculatorService(calculationText, OPERATORS);
-        return [result, "0"];
+        return [result, result];
       }
     case "DEL":
       if (calculationText.toString().length === 1) {

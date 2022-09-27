@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 function ResultField(props) {
   return (
     <View style={styles.resultContainer}>
-      <Text style={styles.resultText}>{props.value}</Text>;
+      <Text style={styles.resultText}>{props.value}</Text>
     </View>
   );
 }

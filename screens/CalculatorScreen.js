@@ -16,12 +16,11 @@ function CalculatorScreen() {
     () => calculationText.charAt(calculationText.length - 1),
     [calculationText]
   );
+
   let result = [];
 
   const onButtonPress = (enteredValue) => {
     result = buttonPressHandler(enteredValue, calculationText, lastChar);
-    console.log(result[0]);
-    console.log(result[1]);
     if (result.length === 1) {
       setCalculationText(result[0]);
     } else {
