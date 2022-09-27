@@ -15,7 +15,7 @@ export function buttonPressHandler(enteredValue, calculationText, lastChar) {
     (OPERATORS.includes(lastChar) || lastChar === ".") &&
     (OPERATORS.includes(enteredValue) || enteredValue === ".")
   ) {
-    return;
+    return [calculationText];
   } else if (OPERATORS.includes(enteredValue) && isValid) {
     let result = calculatorService(calculationText, OPERATORS);
     return [result, result + enteredValue.toString()];

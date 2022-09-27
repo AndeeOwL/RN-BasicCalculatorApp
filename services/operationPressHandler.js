@@ -20,7 +20,5 @@ export function operationPressHandler(calculationText, enteredValue, lastChar) {
       }
     case "AC":
       return ["0", "0"];
-    default:
-      return;
   }
 }
