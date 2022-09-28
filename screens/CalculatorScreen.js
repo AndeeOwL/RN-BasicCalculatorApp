@@ -1,5 +1,5 @@
 import { View, StyleSheet } from "react-native";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 import Buttons from "../components/Buttons";
 import Operators from "../components/Operators";
@@ -12,9 +12,10 @@ import CalculationField from "../components/CalculationField";
 function CalculatorScreen() {
   const [resultText, setResultText] = useState("");
   const [calculationText, setCalculationText] = useState("0");
-  const lastChar =
-    (() => calculationText.charAt(calculationText.length - 1),
-    [calculationText]);
+  const lastChar = useCallback(
+    () => calculationText.charAt(calculationText.length - 1),
+    [calculationText]
+  );
 
   let result = [];
 
