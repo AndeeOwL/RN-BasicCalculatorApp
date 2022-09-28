@@ -21,22 +21,20 @@ function CalculatorScreen() {
 
   const onButtonPress = (enteredValue) => {
     result = buttonPressHandler(enteredValue, calculationText, lastChar);
-    if (result.length === 1) {
-      setCalculationText(result[0]);
-    } else {
-      setCalculationText(result[1]);
-      setResultText(result[0]);
-    }
+    changeState();
   };
 
   const onOperationPress = (enteredValue) => {
     result = operationPressHandler(calculationText, enteredValue, lastChar);
+    changeState();
+  };
 
+  const changeState = () => {
     if (result.length === 1) {
       setCalculationText(result[0]);
     } else {
-      setResultText(result[1]);
-      setCalculationText(result[0]);
+      setResultText(result[0]);
+      setCalculationText(result[1]);
     }
   };
 
